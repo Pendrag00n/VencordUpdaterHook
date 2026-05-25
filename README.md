@@ -6,7 +6,7 @@
 
 ## What is this?
 
-[Vencord](https://github.com/Vendicated/Vencord) is a popular Discord client mod — but every time Discord updates itself, it wipes Vencord out. **VencordLogonUpdater** solves this by running a scheduled task to re-run the Vencord installer automatically on every logon, but only when Discord has actually been updated.
+[Vencord](https://github.com/Vendicated/Vencord) is a popular Discord client mod — but almost every time Discord updates itself, it wipes Vencord out. **VencordLogonUpdater** solves this by running a scheduled task to re-run the Vencord installer automatically on every logon, but only when Discord has actually been updated.
 
 ## How it works
 
