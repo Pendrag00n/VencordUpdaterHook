@@ -1,12 +1,12 @@
-# VencordUpdaterHook
+# VencordLogonUpdater
 
-> A PowerShell hook that automatically reinstalls [Vencord](https://github.com/Vendicated/Vencord) after every Discord update — so you never have to do it manually again.
+> A PowerShell script that automatically reinstalls [Vencord](https://github.com/Vendicated/Vencord) after every Discord update — so you never have to do it manually again.
 
 ---
 
 ## What is this?
 
-[Vencord](https://github.com/Vendicated/Vencord) is a popular Discord client mod — but every time Discord updates itself, it wipes Vencord out. **VencordUpdaterHook** solves this by hooking into Windows Task Scheduler to re-run the Vencord installer automatically on every logon, but only when Discord has actually been updated.
+[Vencord](https://github.com/Vendicated/Vencord) is a popular Discord client mod — but every time Discord updates itself, it wipes Vencord out. **VencordLogonUpdater** solves this by running a scheduled task to re-run the Vencord installer automatically on every logon, but only when Discord has actually been updated.
 
 ## How it works
 
@@ -31,14 +31,14 @@ Automatic installation is planned. Check back for updates.
 
 **Step 1 — Download the script**
 
-Grab [`VencordUpdaterHook.ps1`](https://github.com/Pendrag00n/VencordUpdaterHook/blob/main/VencordHook.ps1) from the repository.
+Grab [`VencordLogonUpdater.ps1`](https://github.com/Pendrag00n/VencordLogonUpdater/blob/main/VencordLogonUpdater.ps1) from the repository.
 
 **Step 2 — Place the script**
 
 Store it somewhere permanent, such as:
 
 ```
-C:\Users\<YourUsername>\AppData\Roaming\MyScripts\VencordUpdaterHook.ps1
+C:\Users\<YourUsername>\AppData\Roaming\MyScripts\VencordLogonUpdater.ps1
 ```
 
 **Step 3 — Open Task Scheduler**
@@ -54,7 +54,7 @@ Press `Win + R`, type `taskschd.msc`, and hit Enter.
 | Field | Value |
 |---|---|
 | Program | `powershell.exe` |
-| Arguments | `-ExecutionPolicy Bypass -File "C:\Users\<YourUsername>\AppData\Roaming\MyScripts\VencordUpdaterHook.ps1"` |
+| Arguments | `-ExecutionPolicy Bypass -File "C:\Users\<YourUsername>\AppData\Roaming\MyScripts\VencordLogonUpdater.ps1"` |
 
 **Step 5 — Save and test**
 
